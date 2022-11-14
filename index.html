@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personality Quiz</title>
+        <link rel="stylesheet" href="style.css"/> 
+    </head>
+    
+    <body>
+        
+        <div id="container">
+            
+            <div id="heading">
+            <h1>Which Avatar the last Airbender character are you?</h1>
+            </div>
+            
+            <h2 id="question"><strong>Question 1: What kind of bender would you want to be?</strong></h2>
+            
+            <div id="buttons">
+                <button id="resultA" type="image"><img id="image1" src="Pictures/airbender.jpeg" height="250px" width="250px" alt="air"><p id="option1">Airbender</p></button>
+                <button id="resultB" type="image"><img id="image2" src="Pictures/waterbender.jpeg" height="250px" width="250px" alt="water"><p id="option2">Waterbender</p></button>
+                <button id="resultC" type="image"><img id="image3" src="Pictures/swordnonbender.jpeg" height="250px" width="250px" alt="non-bender/sword"><p id="option3">Non-bender/Sword</p></button>
+                <button id="resultD" type="image"><img id="image4" src="Pictures/earthbender.png" height="250px" width="250px" alt="earth"><p id="option4">Earthbender</p></button>
+                <button id="resultE" type="image"><img id="image5" src="Pictures/firebender.jpeg" height="250px" width="250px" alt="fire"><p id="option5">Firebender</p></button>
+            
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        
+        <script>
+            
+            let number = 0;
+                $("#image1").on("click", function(){
+                    number += 1
+                });
+                $("#image2").on("click", function(){
+                    number += 2
+                });
+                $("#image3").on("click", function(){
+                    number += 3
+                });
+                $("#image4").on("click", function(){
+                    number += 4
+                });
+                $("#image5").on("click", function(){
+                    number += 5
+                });
+            
+           
+            
+            let question2 = function() {
+                $("#question").text("Which Avatar animal do you like the most?");
+                $("#image1").attr("src", "Pictures/skybisons.jpeg");
+                $("#option1").text("Sky Bisons");
+                $("#image2").attr("src", "Pictures/hogmonkey.jpeg");
+                $("#option2").text("Hogmonkies");
+                $("#image3").attr("src", "Pictures/sabertoothmooselion.webp");
+                $("#option3").text("Sabertooth Moose Lions");
+                $("#image4").attr("src", "Pictures/badgermole.jpeg");
+                $("#option4").text("Badgermoles");
+                $("#image5").attr("src", "Pictures/dragon.png");
+                $("#option5").text("Dragons");
+                $("button").on("click", question3);
+            }
+            
+            let question3 = function() {
+                $("#question").text("Where would you like to go for vacation?");
+                $("#image1").attr("src", "Pictures/omashu.webp");
+                $("#option1").text("Omashu");
+                $("#image2").attr("src", "Pictures/northernwatertribe.webp");
+                $("#option2").text("The Northern Water Tribe");
+                $("#image3").attr("src", "Pictures/library.webp");
+                $("#option3").text("The Library");
+                $("#image4").attr("src", "Pictures/twoloverscave.jpeg");
+                $("#option4").text("Two Lover's Cave");
+                $("#image5").attr("src", "Pictures/emberisland.jpeg");
+                $("#option5").text("Ember Island");
+                $("button").on("click", question4);
+            }
+            
+             let question4 = function() {
+                $("#question").text("How would your friends describe you as?");
+                $("#image1").attr("src", "Pictures/wise.png");
+                $("#option1").empty();
+                $("#image2").attr("src", "Pictures/caring.png");
+                $("#option2").empty();
+                $("#image3").attr("src", "Pictures/funny.png");
+                $("#option3").empty();
+                $("#image4").attr("src", "Pictures/strong.png");
+                $("#option4").empty();
+                $("#image5").attr("src", "Pictures/angry.png");
+                $("#option5").empty();
+                $("button").on("click", question5);
+            }
+             
+            let question5 = function() {
+                $("#question").text("What do you prefer to do in your free time?");
+                $("#image1").attr("src", "Pictures/playwfriends.png");
+                $("#option1").empty();
+                $("#image2").attr("src", "Pictures/katarapreference.png");
+                $("#option2").empty();
+                $("#image3").attr("src", "Pictures/sokkapreference.png");
+                $("#option3").empty();
+                $("#image4").attr("src", "Pictures/tophpreference.png");
+                $("#option4").empty();
+                $("#image5").attr("src", "Pictures/sulkinsadness.png");
+                $("#option5").empty();
+                $("button").on("click", question6);
+            }
+              
+            let question6 = function() {
+                $("#question").text("When in  Ba Sing Se, which activity would you want to do?");
+                $("#image1").attr("src", "Pictures/aangzoo.webp");
+                $("#option1").text("build a new zoo");
+                $("#image2").attr("src", "Pictures/kataraspa.png");
+                $("#option2").text("go to the spa");
+                $("#image3").attr("src", "Pictures/sokkapoetry.jpeg");
+                $("#option3").text("go to a poetry battle");
+                $("#image4").attr("src", "Pictures/tophsleeping.jpeg");
+                $("#option4").text("sleep");
+                $("#image5").attr("src", "Pictures/zukodate.jpeg");
+                $("#option5").text("go on a date");
+                $("button").on("click", question7);
+            }
+               
+            let question7 = function() {
+                $("#question").text("Which line do you relate to the most?");
+                $("#image1").attr("src", "Pictures/aangsquote.png");
+                $("#option1").empty();
+                $("#image2").attr("src", "Pictures/katarasquote.png");
+                $("#option2").empty();
+                $("#image3").attr("src", "Pictures/sokkasquote.png");
+                $("#option3").empty();
+                $("#image4").attr("src", "Pictures/tophsquote.png");
+                $("#option4").empty();
+                $("#image5").attr("src", "Pictures/zukosquote.png");
+                $("#option5").empty();
+                $("button").on("click", question8);
+            }
+                
+            let question8 = function() {
+                $("#question").text("Which nation do you prefer?");
+                $("#image1").attr("src", "Pictures/airnation.jpeg");
+                $("#option1").text("Air Nation");
+                $("#image2").attr("src", "Pictures/waternation.jpeg");
+                $("#option2").text("Water Tribe");
+                $("#image3").attr("src", "Pictures/avatarnations.jpeg");
+                $("#option3").text("All of them");
+                $("#image4").attr("src", "Pictures/earthkingdom.jpeg");
+                $("#option4").text("Earth Kingdom");
+                $("#image5").attr("src", "Pictures/firenation.jpeg");
+                $("#option5").text("Fire Nation");
+                $("button").on("click", question9);
+            }
+            
+            let question9 = function() {
+                $("#question").text("Which Appa would you want to cuddle?");
+                $("#image1").attr("src", "Pictures/babyappa.jpeg");
+                $("#option1").text("Baby Appa");
+                $("#image2").attr("src", "Pictures/braveappa.png");
+                $("#option2").text("Brave Appa");
+                $("#image3").attr("src", "Pictures/hungryappa.jpeg");
+                $("#option3").text("Hungry Appa");
+                $("#image4").attr("src", "Pictures/strongappa.jpeg");
+                $("#option4").text("Strong Appa");
+                $("#image5").attr("src", "Pictures/angryappa.jpeg");
+                $("#option5").text("Angry Appa");
+                $("button").on("click", question10);
+            }
+             
+            let question10 = function() {
+                $("#question").text("What is your favorite thing about yourself?");
+                $("#image1").attr("src", "Pictures/mypatience.png");
+                $("#option1").empty();
+                $("#image2").attr("src", "Pictures/kataraself.png");
+                $("#option2").empty();
+                $("#image3").attr("src", "Pictures/sokkaself.png");
+                $("#option3").empty();
+                $("#image4").attr("src", "Pictures/tophself.png");
+                $("#option4").empty();
+                $("#image5").attr("src", "Pictures/zukoself.png");
+                $("#option5").empty();
+                $("button").on("click", results);
+            }
+            
+            let results = function() {
+                $("#buttons").empty();
+                $("h1").html("Results!");
+               if (number <= 10){
+                   $("#question").html("You got Aang!").css("color", "darkgoldenrod");
+                   $("<img>").attr("src", "Pictures/aang.jpeg").width("650").appendTo("#buttons");
+                   $("#image1").remove();
+                   $("#image2").remove();
+                   $("#image3").remove();
+                   $("#image4").remove();
+                   $("#image5").remove();
+                   
+               }
+                
+                else if (number <= 20){
+                   $("#question").html("You got Katara!").css("color", "navy");
+                   $("<img>").attr("src", "Pictures/katara.png").width("650").appendTo("#buttons");
+                   $("#image1").remove();
+                   $("#image2").remove();
+                   $("#image3").remove();
+                   $("#image4").remove();
+                   $("#image5").remove();
+               }
+                
+                else if (number <= 30){
+                   $("#question").html("You got Sokka!").css("color", "rebeccapurple");
+                   $("<img>").attr("src", "Pictures/sokka.png").width("650").appendTo("#buttons");
+                   $("#image1").remove();
+                   $("#image2").remove();
+                   $("#image3").remove();
+                   $("#image4").remove();
+                   $("#image5").remove();
+               }
+                
+                else if (number <= 40){
+                   $("#question").html("You got Toph!").css("color", "darkgreen");
+                   $("<img>").attr("src", "Pictures/toph.jpeg").width("650").appendTo("#buttons");
+                   $("#image1").remove();
+                   $("#image2").remove();
+                   $("#image3").remove();
+                   $("#image4").remove();
+                   $("#image5").remove();
+               }
+                
+                else if (number <= 50){
+                   $("#question").html("You got Zuko!").css("color", "maroon");
+                   $("<img>").attr("src", "Pictures/zuko.jpeg").width("650").appendTo("#buttons");
+                   $("#image1").remove();
+                   $("#image2").remove();
+                   $("#image3").remove();
+                   $("#image4").remove();
+                   $("#image5").remove();
+               }
+            }
+                
+            
+            $("button").on("click", question2);
+        
+        
+        </script>  
+    
+    </body>
+</html>
